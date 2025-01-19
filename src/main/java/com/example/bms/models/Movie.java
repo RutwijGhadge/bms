@@ -19,7 +19,6 @@ public class Movie extends BaseModel{
     @ManyToMany
     private List<Actor> actorList;
 
-    @ElementCollection
     @Enumerated(EnumType.STRING)
     private List<MovieFeatures>movieFeatures;
 }

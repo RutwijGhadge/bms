@@ -20,7 +20,6 @@ public class Auditorium extends BaseModel{
     @OneToMany
     private List<Seat>seats;
 
-    @ElementCollection
     @Enumerated(EnumType.STRING)
     private List<AuditoriumFeatures>auditoriumFeatures;
 }

@@ -1,14 +1,16 @@
 package com.example.bms.models;
 
 import com.example.bms.models.constants.TicketStatus;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
-import jakarta.persistence.ManyToMany;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.time.LocalDateTime;
 import java.util.List;
 
+@Entity
+@Setter
+@Getter
 public class Ticket extends BaseModel{
 
     @ManyToOne
