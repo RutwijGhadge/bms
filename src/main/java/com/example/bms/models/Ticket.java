@@ -19,7 +19,7 @@ public class Ticket extends BaseModel{
     @ManyToMany
     private List<ShowSeat> showSeatList;
 
-    private int amount;
+    public int amount;
 
     @Enumerated(EnumType.STRING)
     private TicketStatus ticketStatus;

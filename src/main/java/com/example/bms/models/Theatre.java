@@ -20,6 +20,8 @@ public class Theatre extends BaseModel{
 
 /*
         Theatre     Auditorium
-        1               many
-        1                1
+        1               M
+        1               1
+
+        Theatre:Auditorium -> 1:M
  */

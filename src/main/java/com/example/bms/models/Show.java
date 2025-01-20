@@ -29,9 +29,9 @@ public class Show extends BaseModel{
 /*
         show        audi
         1           1
-        many        1
+        M        1
 
         show        movie
         1             1
-        many          1
+        M          1
  */
