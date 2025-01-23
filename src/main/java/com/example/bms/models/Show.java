@@ -10,8 +10,6 @@ import java.time.LocalDate;
 import java.util.List;
 
 @Entity
-@Getter
-@Setter
 public class Show extends BaseModel{
     @ManyToOne
     private Auditorium auditorium;
@@ -25,6 +23,45 @@ public class Show extends BaseModel{
     @OneToMany
     List<ShowSeat> showSeats;
 
+    public Auditorium getAuditorium() {
+        return auditorium;
+    }
+
+    public void setAuditorium(Auditorium auditorium) {
+        this.auditorium = auditorium;
+    }
+
+    public LocalDate getStartTime() {
+        return startTime;
+    }
+
+    public void setStartTime(LocalDate startTime) {
+        this.startTime = startTime;
+    }
+
+    public LocalDate getEndTime() {
+        return endTime;
+    }
+
+    public void setEndTime(LocalDate endTime) {
+        this.endTime = endTime;
+    }
+
+    public Movie getMovie() {
+        return movie;
+    }
+
+    public void setMovie(Movie movie) {
+        this.movie = movie;
+    }
+
+    public List<ShowSeat> getShowSeats() {
+        return showSeats;
+    }
+
+    public void setShowSeats(List<ShowSeat> showSeats) {
+        this.showSeats = showSeats;
+    }
 }
 /*
         show        audi

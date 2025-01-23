@@ -9,15 +9,37 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Entity
-@Getter
-@Setter
 public class Seat extends BaseModel {
 
-    private int seatNumber;
+    private Long seatNumber;
 
     @Enumerated(EnumType.STRING)
     private SeatType seatType;
 
     @Enumerated(EnumType.STRING)
     private SeatStatus seatStatus;
+
+    public Long getSeatNumber() {
+        return seatNumber;
+    }
+
+    public void setSeatNumber(Long seatNumber) {
+        this.seatNumber = seatNumber;
+    }
+
+    public SeatType getSeatType() {
+        return seatType;
+    }
+
+    public void setSeatType(SeatType seatType) {
+        this.seatType = seatType;
+    }
+
+    public SeatStatus getSeatStatus() {
+        return seatStatus;
+    }
+
+    public void setSeatStatus(SeatStatus seatStatus) {
+        this.seatStatus = seatStatus;
+    }
 }

@@ -9,9 +9,8 @@ import lombok.Setter;
 import java.time.LocalDateTime;
 import java.util.List;
 
+
 @Entity
-@Setter
-@Getter
 public class Payment extends BaseModel{
     @Enumerated(EnumType.STRING)
     private MethodOfPayment methodOfPayment;
@@ -23,11 +22,56 @@ public class Payment extends BaseModel{
     @Enumerated(EnumType.STRING)
     private PaymentStatus paymentStatus;
 
-    @ManyToOne
-    private Ticket ticket;
-
     @OneToMany
     private List<Transaction> transactionList;
+
+    public List<Transaction> getTransactionList() {
+        return transactionList;
+    }
+
+    public void setTransactionList(List<Transaction> transactionList) {
+        this.transactionList = transactionList;
+    }
+
+    public PaymentStatus getPaymentStatus() {
+        return paymentStatus;
+    }
+
+    public void setPaymentStatus(PaymentStatus paymentStatus) {
+        this.paymentStatus = paymentStatus;
+    }
+
+    public LocalDateTime getTimeOfPayment() {
+        return timeOfPayment;
+    }
+
+    public void setTimeOfPayment(LocalDateTime timeOfPayment) {
+        this.timeOfPayment = timeOfPayment;
+    }
+
+    public String getReferenceId() {
+        return referenceId;
+    }
+
+    public void setReferenceId(String referenceId) {
+        this.referenceId = referenceId;
+    }
+
+    public Double getAmount() {
+        return Amount;
+    }
+
+    public void setAmount(Double amount) {
+        Amount = amount;
+    }
+
+    public MethodOfPayment getMethodOfPayment() {
+        return methodOfPayment;
+    }
+
+    public void setMethodOfPayment(MethodOfPayment methodOfPayment) {
+        this.methodOfPayment = methodOfPayment;
+    }
 }
 /*
 Ticket      Payment
